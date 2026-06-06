@@ -1,0 +1,11 @@
+#!name = 山海 shcdn 入口IP覆写 (Host)
+#!desc = 将 *.shcdn.xyz 强制解析到手动填写的落地入口IP。机场更换入口时，只需在本插件设置里改IP→保存→重连，无需重装官方客户端或重新抓包。配合保留域名的订阅一起用，节点列表仍可自动更新。
+#!author = self
+#!date = 2026-06-06
+#!tag = 山海
+
+[Argument]
+landing_ip = input,"",tag=落地入口IP,desc=*.shcdn.xyz 强制解析到的入口IP。机场换入口后在此修改并重连即可。
+
+[Host]
+*.shcdn.xyz = {landing_ip}
